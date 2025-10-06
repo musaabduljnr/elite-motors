@@ -1,4 +1,3 @@
-alert("JS file loaded!");
 // Vehicle data
         const vehicles = {
             'sedan-x7': {
