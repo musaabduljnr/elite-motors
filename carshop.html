@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Motors | Premium Automobiles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .car-card {
+            transition: transform 0.3s ease;
+        }
+        .car-card:hover {
+            transform: translateY(-5px);
+        }
+        .page-section {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .nav-active {
+            color: #2563eb;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-car text-3xl text-blue-600 mr-2"></i>
+                <h1 class="text-2xl font-bold text-gray-800">Elite Motors</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="home">Home</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="vehicles">Vehicles</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="about">About</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="services">Services</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="contact">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition book-test-drive-btn">Book Test Drive</button>
+                <button class="md:hidden text-gray-700 mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="#" class="block py-2 text-gray-700 hover:text-blue-600 nav-link" data-page="home">Home</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-blue-600 nav-link" data-page="vehicles">Vehicles</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-blue-600 nav-link" data-page="about">About</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-blue-600 nav-link" data-page="services">Services</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-blue-600 nav-link" data-page="contact">Contact</a>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="page-section active">
+        <!-- Hero Section -->
+        <section class="hero-bg text-white py-24 md:py-32">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Experience Luxury Driving</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Discover our premium collection of high-performance vehicles designed for the modern driver.</p>
+                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700 transition explore-vehicles-btn">Explore Vehicles</button>
+                    <button class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-white hover:text-gray-900 transition book-test-drive-btn">Book Test Drive</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Vehicles -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Featured Vehicles</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Vehicle Card 1 -->
+                    <div class="car-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gray-200 flex items-center justify-center">
+                            <i class="fas fa-car text-6xl text-gray-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Elite Sedan X7</h3>
+                            <p class="text-gray-600 mb-4">Luxury sedan with advanced features and premium comfort.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-blue-600">$45,999</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition view-details-btn" data-vehicle="sedan-x7">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Vehicle Card 2 -->
+                    <div class="car-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gray-200 flex items-center justify-center">
+                            <i class="fas fa-car text-6xl text-gray-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Sport SUV Pro</h3>
+                            <p class="text-gray-600 mb-4">Powerful SUV with exceptional performance and spacious interior.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-blue-600">$52,999</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition view-details-btn" data-vehicle="suv-pro">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Vehicle Card 3 -->
+                    <div class="car-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gray-200 flex items-center justify-center">
+                            <i class="fas fa-car text-6xl text-gray-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Eco Hybrid Elite</h3>
+                            <p class="text-gray-600 mb-4">Efficient hybrid vehicle with cutting-edge technology.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-blue-600">$38,999</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition view-details-btn" data-vehicle="hybrid-elite">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="bg-gray-800 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-gray-900 transition view-all-vehicles-btn">View All Vehicles</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-car text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Vehicle Sales</h3>
+                        <p class="text-gray-600">Browse our extensive collection of new and pre-owned premium vehicles.</p>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tools text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Maintenance & Repair</h3>
+                        <p class="text-gray-600">Expert service and maintenance to keep your vehicle in perfect condition.</p>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Warranty & Insurance</h3>
+                        <p class="text-gray-600">Comprehensive warranty packages and insurance options for peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 bg-blue-600 text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-blue-700 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Michael Johnson</h4>
+                                <p class="text-blue-200">Elite Sedan X7 Owner</p>
+                            </div>
+                        </div>
+                        <p class="italic">"The buying experience at Elite Motors was exceptional. Their team helped me find the perfect vehicle and the after-sales service has been outstanding."</p>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-blue-700 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Sarah Williams</h4>
+                                <p class="text-blue-200">Sport SUV Pro Owner</p>
+                            </div>
+                        </div>
+                        <p class="italic">"I've owned my Sport SUV Pro for over a year now and it's been flawless. The performance and luxury features exceed my expectations."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Vehicles Page -->
+    <section id="vehicles" class="page-section">
+        <div class="bg-blue-600 text-white py-12">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold">Our Vehicle Collection</h1>
+                <p class="text-xl mt-2">Discover the perfect vehicle for your lifestyle</p>
+            </div>
+        </div>
+
+        <div class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <!-- Vehicle Filters -->
+                <div class="mb-8 bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Filter Vehicles</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <select class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>All Types</option>
+                            <option>Sedan</option>
+                            <option>SUV</option>
+                            <option>Sports Car</option>
+                            <option>Hybrid/Electric</option>
+                        </select>
+                        <select class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>All Price Ranges</option>
+                            <option>Under $30,000</option>
+                            <option>$30,000 - $50,000</option>
+                            <option>$50,000 - $80,000</option>
+                            <option>Over $80,000</option>
+                        </select>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Apply Filters</button>
+                    </div>
+                </div>
+                
+                <!-- Vehicles Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Repeat vehicle cards from home page with additional vehicles -->
+                    <div class="car-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gray-200 flex items-center justify-center">
+                            <i class="fas fa-car text-6xl text-gray-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Luxury Coupe GT</h3>
+                            <p class="text-gray-600 mb-4">Elegant coupe with sporty performance and luxury features.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-blue-600">$67,999</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition view-details-btn" data-vehicle="coupe-gt">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="car-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gray-200 flex items-center justify-center">
+                            <i class="fas fa-car text-6xl text-gray-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Adventure Truck XT</h3>
+                            <p class="text-gray-600 mb-4">Rugged truck built for adventure and heavy-duty tasks.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-blue-600">$58,999</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition view-details-btn" data-vehicle="truck-xt">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="car-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gray-200 flex items-center justify-center">
+                            <i class="fas fa-car text-6xl text-gray-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Family Minivan LX</h3>
+                            <p class="text-gray-600 mb-4">Spacious minivan perfect for family trips and daily commutes.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-blue-600">$42,999</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition view-details-btn" data-vehicle="minivan-lx">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page-section">
+        <div class="bg-blue-600 text-white py-12">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold">About Elite Motors</h1>
+                <p class="text-xl mt-2">Three decades of automotive excellence</p>
+            </div>
+        </div>
+
+        <div class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h2 class="text-3xl font-bold mb-6 text-gray-800">Our Story</h2>
+                        <p class="text-gray-600 mb-4">Founded in 1993, Elite Motors began as a small family-owned dealership with a vision to provide premium vehicles with exceptional customer service. What started as a single showroom has grown into a global network of dealerships and service centers.</p>
+                        <p class="text-gray-600 mb-6">Throughout our journey, we've remained committed to our core values of integrity, quality, and customer satisfaction. We believe that owning a vehicle should be an enjoyable experience from purchase through ownership.</p>
+                        <div class="flex space-x-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600">30+</div>
+                                <div class="text-gray-600">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600">150+</div>
+                                <div class="text-gray-600">Models Available</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600">50+</div>
+                                <div class="text-gray-600">Countries Served</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="bg-gray-300 h-64 w-full md:h-80 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-building text-6xl text-gray-500"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16">
+                    <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Our Values</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-handshake text-2xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Integrity</h3>
+                            <p class="text-gray-600">We conduct business with honesty and transparency, building trust with every customer interaction.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-star text-2xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Quality</h3>
+                            <p class="text-gray-600">We deliver premium products and services that meet the highest standards of excellence.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-users text-2xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Customer Focus</h3>
+                            <p class="text-gray-600">We prioritize customer satisfaction and build lasting relationships through exceptional service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Page -->
+    <section id="services" class="page-section">
+        <div class="bg-blue-600 text-white py-12">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold">Our Services</h1>
+                <p class="text-xl mt-2">Comprehensive automotive services to keep your vehicle in perfect condition</p>
+            </div>
+        </div>
+
+        <div class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-car text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Vehicle Sales</h3>
+                        <p class="text-gray-600 mb-4">Browse our extensive collection of new and pre-owned premium vehicles.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-700 transition explore-vehicles-btn">Explore Vehicles →</a>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-tools text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Maintenance & Repair</h3>
+                        <p class="text-gray-600 mb-4">Expert service and maintenance to keep your vehicle in perfect condition.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-700 transition">Schedule Service →</a>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Warranty & Insurance</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive warranty packages and insurance options for peace of mind.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-700 transition">Learn More →</a>
+                    </div>
+                    
+                    <!-- Service 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-gas-pump text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Fuel & Efficiency Services</h3>
+                        <p class="text-gray-600 mb-4">Optimize your vehicle's performance and fuel efficiency with our specialized services.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-700 transition">Learn More →</a>
+                    </div>
+                    
+                    <!-- Service 5 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-paint-roller text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Body & Paint</h3>
+                        <p class="text-gray-600 mb-4">Restore your vehicle's appearance with our professional body and paint services.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-700 transition">Learn More →</a>
+                    </div>
+                    
+                    <!-- Service 6 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-road text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Tire Services</h3>
+                        <p class="text-gray-600 mb-4">Complete tire services including rotation, balancing, and replacement.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-700 transition">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Booking CTA -->
+        <section class="py-12 bg-blue-600 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Experience Our Services?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Schedule an appointment with our service center today and let our experts take care of your vehicle.</p>
+                <button class="bg-white text-blue-600 px-6 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition">Contact Us Now</button>
+            </div>
+        </section>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="page-section">
+        <div class="bg-blue-600 text-white py-12">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold">Contact Us</h1>
+                <p class="text-xl mt-2">Get in touch with our team</p>
+            </div>
+        </div>
+
+        <div class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <h2 class="text-2xl font-bold mb-6 text-gray-800">Get In Touch</h2>
+                        <p class="text-gray-600 mb-6">Have questions about our vehicles or services? Reach out to our team and we'll be happy to assist you.</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Address</h4>
+                                <p class="text-gray-600">123 Automotive Avenue, Detroit, MI 48201</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Phone</h4>
+                                <p class="text-gray-600">(555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@elitemotors.com</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Business Hours</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex justify-between">
+                                <span>Monday - Friday</span>
+                                <span>9:00 AM - 7:00 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Saturday</span>
+                                <span>10:00 AM - 6:00 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Sunday</span>
+                                <span>12:00 PM - 5:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-800">Send Us a Message</h3>
+                            <form id="contactForm">
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2" for="name">Full Name</label>
+                                    <input class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="name" placeholder="Your Name" required>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2" for="email">Email Address</label>
+                                    <input class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="email" id="email" placeholder="Your Email" required>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2" for="phone">Phone Number</label>
+                                    <input class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="tel" id="phone" placeholder="Your Phone">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2" for="subject">Subject</label>
+                                    <select class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="sales">Vehicle Sales</option>
+                                        <option value="service">Service & Maintenance</option>
+                                        <option value="test-drive">Test Drive</option>
+                                        <option value="warranty">Warranty & Insurance</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2" for="message">Message</label>
+                                    <textarea class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="message" rows="4" placeholder="Your Message" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md w-full hover:bg-blue-700 transition">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <section class="py-12 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">Find Us</h2>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="h-96 bg-gray-300 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-map text-6xl text-gray-500"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-car text-2xl text-blue-400 mr-2"></i>
+                        <h3 class="text-xl font-bold">Elite Motors</h3>
+                    </div>
+                    <p class="text-gray-400">Premium automobiles for the discerning driver.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition nav-link" data-page="home">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition nav-link" data-page="vehicles">Vehicles</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition nav-link" data-page="about">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition nav-link" data-page="services">Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition nav-link" data-page="contact">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Warranty Information</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Service Centers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-600 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Elite Motors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Vehicle Details -->
+    <div id="vehicleModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="modalTitle" class="text-2xl font-bold text-gray-800">Vehicle Details</h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div id="modalContent" class="text-gray-600">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Test Drive Booking -->
+    <div id="testDriveModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Book a Test Drive</h3>
+                    <button id="closeTestDriveModal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <form id="testDriveForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="testDriveName">Full Name</label>
+                        <input class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="testDriveName" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="testDriveEmail">Email Address</label>
+                        <input class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="email" id="testDriveEmail" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="testDrivePhone">Phone Number</label>
+                        <input class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="tel" id="testDrivePhone" placeholder="Your Phone" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="testDriveVehicle">Vehicle of Interest</label>
+                        <select class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="testDriveVehicle" required>
+                            <option value="">Select a vehicle</option>
+                            <option value="sedan-x7">Elite Sedan X7</option>
+                            <option value="suv-pro">Sport SUV Pro</option>
+                            <option value="hybrid-elite">Eco Hybrid Elite</option>
+                            <option value="coupe-gt">Luxury Coupe GT</option>
+                            <option value="truck-xt">Adventure Truck XT</option>
+                            <option value="minivan-lx">Family Minivan LX</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="testDriveDate">Preferred Date</label>
+                        <input class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="date" id="testDriveDate" required>
+                    </div>
+                    
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md w-full hover:bg-blue-700 transition">Book Test Drive</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js?v=2"></script>
+    
+
+</body>
+</html>
